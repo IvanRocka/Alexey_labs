@@ -8,20 +8,25 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <GroupBox x:Name="Auto_evaluate_box" Header="Автоматический расчет" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="384" Margin="0,22,0,-22">
-            <Grid HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="299">
-                <RadioButton x:Name="Jan_GB1" Content="Январь" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Feb_GB1" Content="Февраль" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Mar_GB1" Content="Март" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Apr_GB1" Content="Апрель" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="May_GB1" Content="Май" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Jun_GB1" Content="Июнь" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Jul_GB1" Content="Июль" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Aug_GB1" Content="Август" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Sep_GB1" Content="Сентябрь" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Oct_GB1" Content="Октябрь" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Nov_GB1" Content="Ноябрь" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="Dec_GB1" Content="Декабрь" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
-                
+            <Grid x:Name="Grid_1" HorizontalAlignment="Left" Height="373" VerticalAlignment="Top" Width="299">
+                <RadioButton x:Name="Jan_GB1" Content="Январь" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="Jan_GB1_Checked"/>
+                <RadioButton x:Name="Feb_GB1" Content="Февраль" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Checked="Feb_GB1_Checked"/>
+                <RadioButton x:Name="Mar_GB1" Content="Март" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Checked="Mar_GB1_Checked"/>
+                <RadioButton x:Name="Apr_GB1" Content="Апрель" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Checked="Apr_GB1_Checked"/>
+                <RadioButton x:Name="May_GB1" Content="Май" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Checked="May_GB1_Checked"/>
+                <RadioButton x:Name="Jun_GB1" Content="Июнь" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Checked="Jun_GB1_Checked"/>
+                <RadioButton x:Name="Jul_GB1" Content="Июль" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Checked="Jul_GB1_Checked"/>
+                <RadioButton x:Name="Aug_GB1" Content="Август" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Checked="Aug_GB1_Checked"/>
+                <RadioButton x:Name="Sep_GB1" Content="Сентябрь" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Checked="Sep_GB1_Checked"/>
+                <RadioButton x:Name="Oct_GB1" Content="Октябрь" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" Checked="Oct_GB1_Checked"/>
+                <RadioButton x:Name="Nov_GB1" Content="Ноябрь" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Checked="Nov_GB1_Checked"/>
+                <RadioButton x:Name="Dec_GB1" Content="Декабрь" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" Checked="Dec_GB1_Checked"/>
+                <Label Content="Количество дней в месяце " HorizontalAlignment="Left" Margin="137,4,0,0" VerticalAlignment="Top" Width="176"/>
+                <Label Content="Введите текущий год" HorizontalAlignment="Left" Margin="137,72,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Result_days_auto" HorizontalAlignment="Left" Margin="150,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="input_year_auto" HorizontalAlignment="Left" Margin="150,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="Error_label_auto" Content="" HorizontalAlignment="Left" Margin="137,161,0,0" VerticalAlignment="Top"/>
+
             </Grid>
         </GroupBox>
         <GroupBox x:Name="Self_evaluate_box" Header="Ручной рассчет" HorizontalAlignment="Left" Height="423" Margin="393,23,0,-27" VerticalAlignment="Top" Width="393" RenderTransformOrigin="0.5,0.5">
@@ -33,7 +38,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </GroupBox.RenderTransform>
-            <Grid HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="299">
+            <Grid HorizontalAlignment="Left" Height="372" VerticalAlignment="Top" Width="386">
                 <RadioButton x:Name="Jan_GB2" Content="Январь" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <RadioButton x:Name="Feb_GB2" Content="Февраль" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                 <RadioButton x:Name="Mar_GB2" Content="Март" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
@@ -46,6 +51,12 @@
                 <RadioButton x:Name="Oct_GB2" Content="Октябрь" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top"/>
                 <RadioButton x:Name="Nov_GB2" Content="Ноябрь" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
                 <RadioButton x:Name="Dec_GB2" Content="Декабрь" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top"/>
+                <Label Content="Количество дней в месяце" HorizontalAlignment="Left" Margin="131,5,0,0" VerticalAlignment="Top" Width="189"/>
+                <Label Content="Введите текущий год" HorizontalAlignment="Left" Margin="131,71,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Result_days_hands" HorizontalAlignment="Left" Margin="148,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="input_year_hands" Margin="148,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+                <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="242,146,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                <Label x:Name="Error_label_hands" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Grid>
         </GroupBox>
